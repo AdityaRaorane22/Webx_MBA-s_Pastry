@@ -6,6 +6,7 @@ from routes.auth_routes import auth_bp
 from routes.login_routes import login_bp
 from routes.items_route import items_bp
 from routes.cart_route import cart_bp
+from routes.profile_route import users_bp
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -16,6 +17,7 @@ app.register_blueprint(auth_bp)
 app.register_blueprint(login_bp)
 app.register_blueprint(items_bp)
 app.register_blueprint(cart_bp)
+app.register_blueprint(users_bp)
 
 if __name__ == "__main__":
     app.run(debug=True)

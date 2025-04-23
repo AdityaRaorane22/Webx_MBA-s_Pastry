@@ -118,6 +118,31 @@ const Dashboard = () => {
           }}>
             Logged in as: <span style={{ fontWeight: 'bold' }}>{user ? user.mobile : "Guest"}</span>
           </p>
+
+          <button
+  onClick={() => navigate("/update-profile")}
+  style={{
+    background: 'transparent',
+    border: '1px solid #ff6b6b',
+    padding: '10px 20px',
+    borderRadius: '25px',
+    fontWeight: 'bold',
+    color: '#ff6b6b',
+    cursor: 'pointer',
+    transition: 'transform 0.3s ease, box-shadow 0.3s ease'
+  }}
+  onMouseOver={(e) => {
+    e.target.style.transform = 'translateY(-2px)';
+    e.target.style.boxShadow = '0 6px 20px rgba(255, 107, 107, 0.4)';
+  }}
+  onMouseOut={(e) => {
+    e.target.style.transform = 'translateY(0)';
+    e.target.style.boxShadow = 'none';
+  }}
+>
+  Update Profile
+</button>
+
           <button
             onClick={() => navigate("/cart")}
             style={{
